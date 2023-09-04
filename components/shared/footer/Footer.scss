@@ -1,0 +1,42 @@
+.social-icons {
+  a {
+    background-color: rgb(234, 235, 240);
+    .dark &:hover {
+      box-shadow: 0px 1px 10px 0px #22b755;
+
+      svg {
+        fill: #22b755;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 1px 10px 0px #223db7;
+
+      svg {
+        fill: #223db7;
+      }
+    }
+  }
+}
+
+.contact-section {
+    a{
+        &:hover{
+            color: #f54747;
+        }
+        .dark &:hover{
+            color: #2bd399;
+        }
+    }
+}
+
+.explore-section{
+    a{
+        &:hover{
+            color: #f54747;
+        }
+        .dark &:hover{
+            color: #2bd399;
+        }
+    }
+}

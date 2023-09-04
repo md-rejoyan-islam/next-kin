@@ -2,26 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+:root{
+  background-color: white !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+body{
+  height: max-content !important;
+}
+
+.dark{
+  background-color: #0b1829 !important;
+}
+
+
+@font-face {
+  font-family: "Arial";
+  src: url("/fonts/arial/ariblk.ttf");
+}
+
+
+/* @layer components{
+   .custom-style-menu-a{
+        @apply hover:bg-[#3b3b5f] hover:text-white  dark:hover:text-white   dark:hover:bg-[#c0bdca20] 
+    }
+} */ 
+
+@layer components{
+    .custom-style-menu-a{
+          @apply hover:bg-[#3b3b5f] hover:text-white  dark:hover:text-white   dark:hover:bg-[#c0bdca20] 
+      }
+
+
+      /* faq page */
+       .faq-container{
+    @apply collapse collapse-arrow rounded-lg border-zinc-300 border dark:border-[#22176b]  m-auto
   }
+  .faq-wrapper{
+    @apply  sm:text-xl border overflow-hidden   font-bold dark:bg-[#182c49]  border-b dark:border-none  pb-0 bg-[#ebeeffa1] dark:text-white
+  }
+  .faq-collapse-container {
+    @apply  overflow-hidden box-border  bg-[#fdfdfd] dark:text-[#b4bcc8] dark:bg-[#ebeeff0f] pb-0
+  }
+  .faq-collapse-container p{
+    @apply  pt-3 text-[16px]
+  }
+
+  /* kin text design */
+  .kin{
+    @apply text-[#d00b11] dark:text-[#d00b11] font-black font-['Arial_Black']
+  }
+
+  /* register page design  */
+   .form-input{
+        @apply block text-[18px] px-[15px] pb-2.5 pt-3 w-full  text-gray-900 bg-transparent rounded-lg border border-slate-400 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 
+    }
+
+    .form-label{
+        @apply absolute  text-[18px] text-gray-600 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-[2px] left-[10px] z-10 origin-[0] bg-[#f6f7f8] dark:bg-[#182c49] px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500         peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 
+                peer-focus:top-[2px] peer-focus:scale-75 peer-focus:-translate-y-4 
+    }
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}

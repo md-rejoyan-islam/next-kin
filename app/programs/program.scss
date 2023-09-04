@@ -1,0 +1,13 @@
+.card:hover .img {
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+figure {
+  overflow: hidden;
+}
+.img {
+  transition: transform 0.2s;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}

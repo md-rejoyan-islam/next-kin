@@ -1,0 +1,152 @@
+.navbar {
+  height: 65px;
+  .navbar-start {
+    ul {
+      li {
+        ul {
+          &.vertical-child-1 {
+            display: none;
+          }
+
+          &.vertical-child-2 {
+            display: none;
+          }
+        }
+
+        a {
+          height: 100%;
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          padding: 6px 10px;
+        }
+      }
+      #menu-toggle:checked ~ .vertical-child-1 {
+        display: block;
+      }
+      #menu-toggle2:checked ~ .vertical-child-2 {
+        display: block;
+      }
+
+      // :hover .vertical-child-1 {
+      //  display: block;
+      // }
+      // :hover .vertical-child-2 {
+      //   display: block;
+      // }
+    }
+  }
+  .navbar-center {
+    height: 100%;
+    ul {
+      height: 100%;
+
+      li {
+        display: flex;
+        justify-content: center;
+
+        ul {
+          position: absolute;
+          height: fit-content;
+          margin: 0;
+          padding: 0;
+          border-radius: 0;
+
+          top: 65.5px;
+          li {
+            border-bottom: 1px solid rgb(226, 221, 221);
+            a {
+              border-radius: 0 !important;
+            }
+          }
+          .dark & li {
+            border-bottom: 1px solid rgb(37, 36, 66);
+            a {
+              border-radius: 0 !important;
+            }
+          }
+        }
+        ul::before {
+          display: none;
+        }
+        .drop-child-1 {
+          display: none;
+
+          left: -3px;
+          :hover {
+            border-radius: 0px;
+          }
+        }
+        .drop-child-2 {
+          display: none;
+          position: absolute;
+          left: -3px;
+          :hover {
+            border-radius: 0px !important;
+          }
+        }
+      }
+      :hover .drop-child-1 {
+        display: block;
+      }
+      :hover .drop-child-2 {
+        display: block;
+      }
+    }
+  }
+}
+.active {
+  color: white !important;
+  border-radius: 4px !important;
+  background-color: #3b3b5f !important;
+}
+
+.dark .active {
+  background-color: #c0bdca20 !important;
+}
+
+// dropdown hover
+li {
+  a,
+  span {
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px !important;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  :hover {
+    border-radius: 4px;
+  }
+  .dark &:hover > a {
+    background-color: #c0bdca20;
+    border-radius: 4px;
+  }
+  &:hover > a {
+    background-color: #3b3b5f;
+    color: white;
+    border-radius: 4px;
+  }
+}
+
+.dark span {
+  color: #f3f6f9;
+}
+.dark a {
+  color: #f3f6f9;
+} 
+
+.dropdown ul .vertical-child-1 {
+  display: none;
+}
+
+// a:focus {
+//   color: black !important ;
+
+// }
+// .dark a:focus {
+//   color: white !important ;
+
+// }
